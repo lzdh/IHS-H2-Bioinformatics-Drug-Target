@@ -1,17 +1,19 @@
 # IHS-H2-Bioinformatics-Drug-Target
 
-## code upload
-* Fingerprints generation
-* Main model: e.g. NN randome search and code used to make the predictions on the test set
+This project is for the IEEE Covid-19 data hackathon's H2: Bioinformatics Drug Challenge. 
 
-* Attach XGB fine-tune?
+Our final method is an feed-forward neural network model to predict docking scores of candidate drug molecules on SARS-CoV-2 protein targets.  We also tried XGBoost regressor and other , but their performance in MAE are higher compared with NN model.  
 
+In the repository, `src` file contains all of our codes and `BestNN_circ` file contains our pretrained NN models.
 
-## Model upload
-* Need to upload the final models used to obtain the scores on the test set. Potentially 18 models.
+### In `src`:
 
-## Fingerprints share
-* need to find a way to share fingerprints?
+- `FineTuneXGB.ipynb`: finetune 3 main parameters of XGBoost regressor(baseline) on each protein target including the number of the estimators, the depth of the tree and the minimum child weight.
+- `FingerprintsGeneration.ipynb` : generate 4 types of fingerprints(MACCS fingerprint, RDKit fingerprint, ECFP4 and MHFP6) and get their UMAP visualization.
+- `NN_RandomSearch.ipynb`: apply random search for tuning our feed-forward neural network's hyper-parameters including layer depth, layer width and dropout rate.
+- `NN_arch.pk`: saved best neural network architecture from random search.  
+- `TestPredcition.ipynb`: use our pretrained model to get docking score prediction on test set.
 
-## Report
-Attach a copy of report here?
+### In `BestNN_circ`:
+
+- bestNN_circ_col{x}: saved neural network model pretrained on training set for the protein target in column x (x ranges from 0 to 17). The model use the  architecture in `src/NN_arch.pk`.
