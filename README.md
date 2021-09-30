@@ -16,4 +16,4 @@ In the repository, `src` file contains all of our codes and `BestNN_circ` file c
 
 ### In `BestNN_circ`:
 
-- bestNN_circ_col{x}: saved neural network model pretrained on training set for the protein target in column x (x ranges from 0 to 17). The model use the  architecture in `src/NN_arch.pk`.
+- `bestNN_circ_col{x}`: saved neural network model pretrained on training set for the protein target in column x (x ranges from 0 to 17). The model use the  architecture in `src/NN_arch.pk`.
