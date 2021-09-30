@@ -2,7 +2,7 @@
 
 This project is for the IEEE Covid-19 data hackathon's H2: Bioinformatics Drug Challenge. 
 
-Our final method is an feed-forward neural network model to predict docking scores of candidate drug molecules on SARS-CoV-2 protein targets.  We also tried XGBoost regressor and other , but their performance in MAE are higher compared with NN model.  
+Our final method is an feed-forward neural network model to predict docking scores of candidate drug molecules on SARS-CoV-2 protein targets.  We also tried XGBoost regressor and other , but their performance in mean absolute error(MAE) is higher than our NN model.  
 
 In the repository, `src` file contains all of our codes and `BestNN_circ` file contains our pretrained NN models.
 
